@@ -9,9 +9,8 @@ class DetalleVentaService {
     }
     
     async filterById(id) {
-        const DetalleVenta = await DetalleVenta.findByPk(id);
-        return DetalleVenta;
-    }
+    return await DetalleVenta.findByPk(id);
+}
 
     async create(data) {
         return await DetalleVenta.create(data);
