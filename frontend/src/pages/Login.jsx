@@ -24,7 +24,7 @@ function Login() {
             )
 
             console.log(response.data)
-            navigate('/ventas')
+            navigate('/productos')
 
         } catch (error) {
 
