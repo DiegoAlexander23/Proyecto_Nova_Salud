@@ -1,0 +1,126 @@
+.productos-container {
+    display: flex;
+    min-height: 100vh;
+    background: #f1f5f9;
+}
+
+/* CONTENIDO */
+.productos-content {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* FORMULARIO */
+.productos-form {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    height: fit-content;
+}
+
+.productos-form h2 {
+    margin-bottom: 15px;
+    color: #1e293b;
+}
+
+/* INPUTS */
+.productos-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+}
+
+.productos-form input:focus {
+    border-color: #16a34a;
+}
+
+/* BOTÓN PRINCIPAL (GUARDAR / ACTUALIZAR) */
+.productos-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #16a34a; /* verde */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+.productos-form button:hover {
+    background: #15803d;
+}
+
+/* BOTÓN CANCELAR */
+.productos-form button:nth-of-type(2) {
+    background: #6b7280;
+}
+
+.productos-form button:nth-of-type(2):hover {
+    background: #4b5563;
+}
+
+/* LISTA */
+.productos-lista {
+    flex: 2;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    overflow-x: auto;
+}
+
+.productos-lista h2 {
+    margin-bottom: 15px;
+    color: #1e293b;
+}
+
+/* TABLA */
+.productos-lista table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.productos-lista th,
+.productos-lista td {
+    padding: 12px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+/* BOTONES ACCIONES */
+.productos-lista button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 5px;
+    color: white;
+    font-size: 13px;
+}
+
+/* EDITAR = VERDE */
+.productos-lista button:first-child {
+    background: #16a34a;
+}
+
+.productos-lista button:first-child:hover {
+    background: #15803d;
+}
+
+/* ELIMINAR = ROJO */
+.productos-lista button:last-child {
+    background: #dc2626;
+}
+
+.productos-lista button:last-child:hover {
+    background: #b91c1c;
+}

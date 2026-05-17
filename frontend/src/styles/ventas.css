@@ -1,0 +1,106 @@
+.ventas-container {
+    display: flex;
+    min-height: 100vh;
+    background: #f1f5f9;
+}
+
+/* IMPORTANTE: evita que el sidebar rompa layout */
+.ventas-content {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    min-width: 0;
+}
+
+/* PRODUCTOS */
+.ventas-productos {
+    flex: 2;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    overflow-x: auto;
+}
+
+/* CARRITO */
+.ventas-carrito {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* SEARCH */
+.input-search {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+}
+
+/* BOTÓN AGREGAR */
+.btn-add {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-add:hover {
+    background: #1d4ed8;
+}
+
+/* BOTÓN CONFIRMAR */
+.btn-confirm {
+    width: 100%;
+    background: #16a34a;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-confirm:hover {
+    background: #15803d;
+}
+
+/* ITEMS CARRITO */
+.carrito-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+.ventas-productos table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+/* CABECERA */
+.ventas-productos th {
+    text-align: left;
+    padding: 14px 12px;
+    background: #f1f5f9;
+    font-weight: 600;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+/* FILAS */
+.ventas-productos td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: middle;
+}
+
+/* hover bonito */
+.ventas-productos tr:hover {
+    background: #f8fafc;
+}

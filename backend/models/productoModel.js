@@ -6,6 +6,6 @@ const Producto = sequelize.define('Producto',{
     descripcion: {type: DataTypes.STRING, allowNull: false},
     precio: {type: DataTypes.DOUBLE, allowNull: false},
     stock: {type: DataTypes.INTEGER, allowNull: false},
-    categoria: {type: DataTypes.INTEGER, allowNull: false}
+    categoria: {type: DataTypes.STRING, allowNull: false}
 })
 module.exports = Producto

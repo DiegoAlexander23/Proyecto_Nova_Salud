@@ -9,8 +9,8 @@ class ProductoService {
     }
     
     async filterById(id) {
-        const Producto = await Producto.findByPk(id);
-        return Producto;
+        const producto = await Producto.findByPk(id)
+        return producto
     }
 
     async create(data) {

@@ -3,6 +3,7 @@ const router = express.Router()
 
 const userController=require('../controllers/userController')
 
+router.post('/login', userController.login)
 router.get('/', userController.getAllUsers)
 router.get('/:id', userController.getUser)
 router.post('/', userController.createUser)

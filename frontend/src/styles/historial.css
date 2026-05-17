@@ -1,0 +1,43 @@
+.historial-container {
+    display: flex;
+    min-height: 100vh;
+    background: #f1f5f9;
+}
+
+/* CONTENIDO */
+.historial-content {
+    flex: 1;
+    padding: 30px;
+}
+
+/* TITULO */
+.historial-content h1 {
+    margin-bottom: 20px;
+    color: #1e293b;
+}
+
+/* LISTA DE VENTAS */
+.venta-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: 0.2s;
+}
+
+.venta-card:hover {
+    transform: translateY(-2px);
+}
+
+/* TEXTO */
+.venta-card p {
+    margin: 5px 0;
+    color: #334155;
+}
+
+.venta-total {
+    font-size: 18px;
+    font-weight: bold;
+    color: #16a34a;
+}

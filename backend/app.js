@@ -4,8 +4,8 @@ const cors = require('cors');
 
 const usersRouter = require('./routers/userRouters');
 const productosRouter= require('./routers/productoRouters')
-//const authRouter = require('./routers/authRouters');
-//const DashboardRouter=require("./routers/dashboardRouther")
+const ventaService=require('./routers/ventaRouters')
+const detalleVentaRouters=require('./routers/detalleVentaRouters')
 
 require('./database/connection'); 
 
@@ -18,8 +18,8 @@ app.get('/', (req, res) => {
 
 app.use('/users', usersRouter); 
 app.use('/productos', productosRouter);
-//app.use('/auth', authRouter);
-//app.use('/dashboard', DashboardRouter)
+app.use('/ventas', ventaService);
+app.use('/detalleVentas', detalleVentaRouters);
 
 const sequelize = require('./database/connection');
 sequelize.sync({ alter: true }) 

@@ -1,5 +1,49 @@
 const UserService = require('../services/userService')
 const userService = new UserService
+const bcrypt = require('bcrypt')
+
+exports.login = async (req, res) => {
+
+    try {
+
+        const { email, password } = req.body
+
+        const user = await userService.login(email)
+
+        if (!user) {
+            return res.status(400).json({
+                message: 'Usuario no encontrado'
+            })
+        }
+
+        const validPassword = await bcrypt.compare(
+            password,
+            user.password
+        )
+
+        if (!validPassword) {
+
+            return res.status(400).json({
+                message: 'Contraseña incorrecta'
+            })
+        }
+
+        res.status(200).json({
+            message: 'Login correcto',
+            user: {
+                id: user.id,
+                nombre: user.nombre,
+                email: user.email
+            }
+        })
+
+    } catch (error) {
+
+        res.status(500).json({
+            error: error.message
+        })
+    }
+}
 
 exports.getAllUsers = async (req, res) => {
     try {
@@ -23,9 +67,9 @@ exports.getUser = async (req, res) => {
 exports.createUser = async (req, res) => {
     try {
         let data = req.body; 
-        
         console.log("Datos recibidos en el servidor:", data);
 
+        data.password = await bcrypt.hash(data.password, 10)
         await userService.create(data);
         res.status(201).send("Usuario Registrado");
     } catch (error) {

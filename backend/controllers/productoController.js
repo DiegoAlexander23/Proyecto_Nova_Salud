@@ -44,7 +44,8 @@ exports.updateProducto = async (req, res) => {
         await productoService.update(id, data)
         res.status(200).send('se modifico el registro correctamente')
     } catch (error) {
-        res.status(500).json({ "error": error.message })
+        console.log(error)
+        res.status(500).json({error: error.message})
     }
 }
 exports.deleteProducto = async (req, res) => {
@@ -58,5 +59,6 @@ exports.deleteProducto = async (req, res) => {
         res.status(200).send('Se elimino el Producto registrado')
     } catch (error) {
         res.status(500).json({ "error": error.message })
+        console.log(error)
     }
 }

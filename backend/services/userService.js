@@ -4,12 +4,16 @@ class UserService {
     constructor() {}
 
     async getAllUsers() {
-        const users = await User.findAll()
+        const users = await User.findAll({
+            attributes: { exclude: ['password'] }
+        })
         return users;
     }
     
     async filterById(id) {
-        const user = await User.findByPk(id);
+        const user = await User.findByPk(id, {
+            attributes: { exclude: ['password'] }   
+        });
         return user;
     }
 
@@ -28,6 +32,12 @@ class UserService {
             where: { id: id }
         });
     }
+    async login(email) {
+
+    return await User.findOne({
+        where: { email }
+    })
+}
 }
 
 module.exports = UserService;
